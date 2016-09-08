@@ -1,0 +1,122 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Lists
+
+      * You can define an empy list like this
+        <pre><code class="python">my_variable = []</code></pre>
+      * You can store many values into lists
+        <pre><code class="python">my_variable = [1, 2, 3]</code></pre>
+      * You can add or remove items from lists
+        <pre><code class="python">my_variable.append(4)
+my_variable.remove(4)</code></pre>
+      * You can access an item in the list by it's index:
+        <pre><code class="python">my_variable[1]
+# This should return `2`, because lists are zero-indexed
+        </code></pre>
+      * Find out more about lists [here](https://docs.python.org/2/tutorial/datastructures.html#more-on-lists)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Lists
+
+      * Here is a little example of things you can do with lists:
+
+<pre><code class="python">numbers = [1, 2, 3]
+more_numbers = [4, 5, 6]
+all_numbers = numbers + more_numbers
+print(all_numbers)
+all_numbers.reverse()
+print(all_numbers)
+all_numbers.append(7)
+print(all_numbers)
+all_numbers.sort()
+print(all_numbers)
+</code></pre>
+
+      * The output should look like this:
+<pre><code>[1, 2, 3, 4, 5, 6]
+[6, 5, 4, 3, 2, 1]
+[6, 5, 4, 3, 2, 1, 7]
+[1, 2, 3, 4, 5, 6, 7]
+</pre></code>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Tip: The Range Function
+
+      * "**range()**" is a built-in function
+      * It generates a list of numbers for you:
+        <pre><code class="python">my_list = range(100)
+my_other_list = range(1, 100, 1)
+print(my_list)
+print(my_other_list)
+        </code></pre>
+    </script>
+  </section>
+
+  <section>
+      <h2>Loops</h2>
+
+      <ul>
+        <li>You often need to repeat the same code in a loop</li>
+        <li>Loops look like this:</li>
+      </ul>
+
+<pre><code class="python" data-trim>
+var my_list = [1, 2, 3, 4]
+
+for my_number in my_list:
+    if my_number == 1:
+        continue
+    print (my_number)
+</code></pre>
+
+      <ul>
+        <li>You can use "<strong>continue</strong>" to skip this iteration of the loop</li>
+      </ul>
+
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Let's extend the output of our program so that it shows all future birthdays up to the provided age</li>
+      </ul>
+
+<pre><code class="python" data-trim>
+import sys
+from datetime import datetime, date
+
+def get_future_date(base_date, years):
+    future_date = date(
+        base_date.year + years,
+        base_date.month,
+        base_date.day
+    )
+    return future_date
+
+if len(sys.argv) < 3:
+    print("ERROR: Please provide a date and an age")
+else:
+    try:
+        birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+    except ValueError:
+        print("ERROR: Please enter a correct date")
+        sys.exit()
+    years = int(sys.argv[2])
+    years_list = range(1, years + 1, 1)
+    for year in years_list:
+        future_date = get_future_date(birthday, year)
+        message = "I will turn {} on {}".format(year, future_date)
+        print(message)
+</code></pre>
+    </script>
+  </section>
+</section>
