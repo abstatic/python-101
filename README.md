@@ -13,7 +13,7 @@ them to Github.
 
 In order to start a new presentation, do the following:
 
-    git clone git@github.com:mbrochh/reveal-template.git
+    git clone git@github.com:abstatic/python-101.git
     rm -rf .git
     git init
     git add .
@@ -57,3 +57,5 @@ If all looks good, publish to Github:
 
 This repository contains the code of [Reveal.js](https://github.com/hakimel/reveal.js)
 which is licensed under the [MIT license](https://github.com/hakimel/reveal.js/blob/master/LICENSE).
+
+This code is adapted from https://github.com/mbrochh/python-101
