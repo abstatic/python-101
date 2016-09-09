@@ -28,13 +28,13 @@ my_variable.remove(4)</code></pre>
 <pre><code class="python">numbers = [1, 2, 3]
 more_numbers = [4, 5, 6]
 all_numbers = numbers + more_numbers
-print(all_numbers)
+print all_numbers
 all_numbers.reverse()
-print(all_numbers)
+print all_number
 all_numbers.append(7)
-print(all_numbers)
+print all_numbers
 all_numbers.sort()
-print(all_numbers)
+print all_numbers
 </code></pre>
 
       * The output should look like this:
@@ -54,8 +54,8 @@ print(all_numbers)
       * It generates a list of numbers for you:
         <pre><code class="python">my_list = range(100)
 my_other_list = range(1, 100, 1)
-print(my_list)
-print(my_other_list)
+print my_list
+print my_other_list
         </code></pre>
     </script>
   </section>
@@ -74,7 +74,7 @@ var my_list = [1, 2, 3, 4]
 for my_number in my_list:
     if my_number == 1:
         continue
-    print (my_number)
+    print my_number
 </code></pre>
 
       <ul>
@@ -103,19 +103,19 @@ def get_future_date(base_date, years):
     return future_date
 
 if len(sys.argv) < 3:
-    print("ERROR: Please provide a date and an age")
+    print "ERROR: Please provide a date and an age"
 else:
     try:
         birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     except ValueError:
-        print("ERROR: Please enter a correct date")
+        print "ERROR: Please enter a correct date"
         sys.exit()
     years = int(sys.argv[2])
     years_list = range(1, years + 1, 1)
     for year in years_list:
         future_date = get_future_date(birthday, year)
         message = "I will turn {} on {}".format(year, future_date)
-        print(message)
+        print message
 </code></pre>
     </script>
   </section>

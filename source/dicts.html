@@ -57,12 +57,12 @@ def get_future_date(base_date, years):
     return future_date
 
 if len(sys.argv) < 3:
-    print("ERROR: Please provide a date and an age")
+    print "ERROR: Please provide a date and an age"
 else:
     try:
         birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     except ValueError:
-        print("ERROR: Please enter a correct date")
+        print "ERROR: Please enter a correct date"
         sys.exit()
     years = int(sys.argv[2])
     years_list = range(1, years + 1, 1)
@@ -70,7 +70,7 @@ else:
         future_date = get_future_date(birthday, year)
         weekday = get_weekday_name(future_date.isoweekday())
         message = "I will turn {} on {}, {}".format(year, weekday, future_date)
-        print(message)
+        print message
 </code></pre>
     </script>
   </section>

@@ -7,7 +7,7 @@
 		<title>Python 101</title>
 
 		<meta name="description" content="Slides featuring a quick introduction to the Python programming language">
-		<meta name="author" content="Martin Brochhaus">
+		<meta name="author" content="Abhishek Shrivastava">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -47,6 +47,10 @@
 
 	<body>
 
+    <div class="logo">
+      <img id="pycon" src="img/pycon.png" />
+      <img id="express" src="img/express.png" />
+    </div>
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
@@ -63,42 +67,21 @@
   <script type="text/template">
     ## Who am I?
 
-    * Martin Brochhaus
-    * Founder of [Bitmazk Pte Ltd](https://bitmazk.com)
-    * Twitter: [@mbrochh](https://twitter.com/mbrochh)
-    * Github: [mbrochh](https://github.com/mbrochh)
-    * Email: mbrochh at gmail dot com
+    * Abhishek Shrivastava
+    * Final year CSE undergradute at UIT, Bhopal
+    * FOSS enthusiast, Python Developer, Google Summer Of Code 2016
+    * Loves computers, dota, and manga ;) 
+    * Twitter: [@abstatic_](https://twitter.com/abstatic_)
+    * Github: [abstatic](https://github.com/abstatic)
+    * Email: xabhishekflyhigh on google's email service
   </script>
-</section>
-<section data-markdown>
-  <script type="text/template">
-    ## Thank you, Red Hat & PayPal Singapore &#9825; &#9825; &#9825;
-
-    > Big thanks to Red Hat & PayPal Singapore for kindly
-    > hosting this event and for sponsoring pizza and softdrinks.
-  </script>
-</section>
-<section>
-  <section data-markdown>
-    <script type="text/template">
-      ##We have a Slack.com community!
-
-      PyLadiesSG has a community on Slack.
-      Myself and others are idling there permanently and we are happy to mentor
-      anyone who needs help.
-
-      Visit [pyladies-sg-slackin.herokuapp.com](http://pyladies-sg-slackin.herokuapp.com)
-      if you are based in Singapore and if you would like an invite.<br />
-      <img src="http://pyladies-sg-slackin.herokuapp.com/badge.svg">
-    </script>
-  </section>
 </section>
 <section data-markdown>
   <script type="text/template">
     ##Follow along!
 
     * You can open this presentation in your browser and follow along
-    * Open: [mbrochh.github.io/python-101](https://mbrochh.github.io/python-101)
+    * Open: [https://github.com/abstatic/python-101](htpps://github.com/abstatic/python-101)
   </script>
 </section>
 <section>
@@ -109,15 +92,15 @@
     
       <li><span class="toc-active" style="color: #17BAF9;">Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -165,15 +148,15 @@ I will turn 10 on Tuesday, 1992-09-08
     
       <li><span >Introduction</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -215,7 +198,21 @@ I will turn 10 on Tuesday, 1992-09-08
       * Python is not the safest language
         * If you want to fly a rocket to Mars, ask Elon Musk what he is using
       * Python is a very readable, learnable and maintainable language
-        * If you want to build a business, use Python
+        * If you want to build a business/start up, use Python
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Python In A Nutshell
+
+      * Python is used in every imaginable field!
+        * Web/Application development, Machine Learning, Data mining/science, Robotics, Bioinformatics... you get my drift
+      * All major companies use it
+        * Google, Fedora, Quora, RedHat, Instagram, Disqus, Reddit, Dropbox, Robotics
+      * Jobs!
+        * There are a lot of python jobs coming up in India
+        * Most of them are of profiles Web Developer OR Data Scientist
     </script>
   </section>
 </section>
@@ -227,15 +224,15 @@ I will turn 10 on Tuesday, 1992-09-08
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span class="toc-active" style="color: #17BAF9;">Cloud9 IDE</span></li>
+      <li><span class="toc-active" style="color: #17BAF9;">Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -243,28 +240,35 @@ I will turn 10 on Tuesday, 1992-09-08
 </section>
   <section data-markdown>
     <script type="text/template">
-      ##Using Cloud9 IDE
+      ##Setting up python
 
       * Setting up Python on your local computer can be time consuming
-      * We have a [Python Introduction](http://mbrochh.github.io/python-introduction/#/) workshop to help with this
-      * For this workshop we will save some time and just use Cloud9 IDE
-      * Create an account at http://c9.io
-      * Create a new workspace "**pyladies-python101**"
     </script>
   </section>
 
   <section data-markdown>
     <script type="text/template">
-      ##How to Execute a Python Script
+      ##Setting up python
 
-      * Open your workspace in Cloud9 IDE
-      * Rightclick at the workspace name in the left sidebar
-      * Chose "**New file**" and name it "**test.py**"
-      * Doubleclick the new file to open it
+      * But... we already took care of the time consuming part!
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Setting up python on your local machine
+
+      * Download and install python interpreter
+      * Add the directory to the PATH 
+        * Copy the path where python is installed
+        * Default is C:\Python27\
+        * 
+      * Open the command line and type "python"
+      * It should open the python interpreter.
       * Enter the following code:
-        <pre><code class="python">print("Hello World")</code></pre>
-      * Save the file
-      * Press the green "**Run**" button at the top
+        <pre><code class="python">print "Hello World"</code></pre>
+      * Press enter!
+      * Congratulations you just executed your first python script
     </script>
   </section>
 </section>
@@ -276,15 +280,15 @@ I will turn 10 on Tuesday, 1992-09-08
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -313,7 +317,7 @@ I will turn 10 on Tuesday, 1992-09-08
 
 <pre><code class="python" data-trim>
 BIRTHDAY = "1982-09-08"
-print(BIRTHDAY)
+print BIRTHDAY
 </code></pre>
 
       <ul>
@@ -330,15 +334,15 @@ print(BIRTHDAY)
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -368,7 +372,7 @@ print(BIRTHDAY)
       * You can call string methods like this:
         <pre><code class="python">my_string = "Hello World!"
 my_string = my_string.upper()
-print(my_string)
+print my_string
         </code></pre>
       * The output should look like this:
         <pre><code class="bash">> HELLO WORLD!</code></pre>
@@ -385,7 +389,7 @@ print(my_string)
       * It looks like this:
         <pre><code class="python">my_age = 33
 my_string = "I am {} years old".format(my_age)
-print(my_string)
+print my_string
         </code></pre>
       * The output should look like this:
         <pre><code class="bash">> I am 33 years old</code></pre>
@@ -402,7 +406,7 @@ print(my_string)
 <pre><code class="python" data-trim>
 BIRTHDAY = "1982-09-08"
 message = "I am born on {}".format(BIRTHDAY)
-print(message)
+print message
 </code></pre>
   </section>
 </section>
@@ -414,15 +418,15 @@ print(message)
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -449,7 +453,7 @@ print(message)
       * We can use things from that library by importing them at the top of our files:
         <pre><code class="python">import datetime
 now = datetime.datetime.now()
-print(now)
+print now
         </code></pre>
       * The output should be the current date and time:
         <pre><code class="bash">> 2015-12-08 02:19:15.529046</code></pre>
@@ -470,11 +474,13 @@ import sys
 
 BIRTHDAY = sys.argv[1]
 message = "I am born on {}".format(BIRTHDAY)
-print(message)
+print message
 </code></pre>
 
       <ul>
-        <li>Try to press the "<strong>Run</strong>" button</li>
+        <li>Save your file.</li>
+        <li>Open up command prompt</li>
+        <li>python birthday.py</li>
       </ul>
 
   </section>
@@ -483,11 +489,10 @@ print(message)
     <script type="text/template">
       ##Exercise
 
-      * Whoops! Pressing the "**Run**" button generates an error:
+      * Whoops! The above command generates an error:
         * "*IndexError: list index out of range*"
       * This is because our program now expects one command line argument
       * From now on, we will execute our script from the Terminal
-      * Press "**ALT+T**" to open a new Terminal
       * Enter <pre><code class="bash">python birthday.py 2015-01-01</code></pre>
       * Leave that tab open, we will run our program from here from now on
     </script>
@@ -502,15 +507,15 @@ print(message)
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -525,10 +530,10 @@ print(message)
       * If it is not true, either nothing should happen or some other code should be executed
       * The If-Statement helps you to do this:
         <pre><code class="python">if 1 > 2:
-    print("One is bigger than two")
+    print "One is bigger than two"
     # This code is actually never reached
 else:
-    print("One is not bigger than two")
+    print "One is not bigger than two"
         </code></pre>
       * The output should be:
         <pre><code class="bash">> One is not bigger than two</code></pre>
@@ -546,11 +551,11 @@ else:
 import sys
 
 if len(sys.argv) < 2:
-    print("ERROR: Please provide a date")
+    print "ERROR: Please provide a date"
 else:
     BIRTHDAY = sys.argv[1]
     message = "I am born on {}".format(BIRTHDAY)
-    print(message)
+    print message
 </code></pre>
 
       <ul>
@@ -570,113 +575,15 @@ else:
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span class="toc-active" style="color: #17BAF9;">Datetimes</span></li>
-      <li><span >Exception Handling</span></li>
-      <li><span >Functions</span></li>
-      <li><span >Lists & Loops</span></li>
-      <li><span >Dictionaries</span></li>
-      <li><span >What's Next?</span></li>
-    
-  </ul>
-</section>
-  <section data-markdown>
-    <script type="text/template">
-      ##Datetimes
-
-      * The built-in **datetime** module has three important classes: **date**, **datetime** and **timedelta**
-      * We can use these classes to do powerful things with date calulations
-      * In order to use the module, you need to import it
-      * This is how you create a datetime object:
-
-<pre><code class="python">import datetime
-my_date = datetime.datetime(2015, 12, 08)
-print(my_date)
-</code></pre>
-
-      * The output should be:
-        <pre><code>2015-12-08 00:00:00</pre></code>
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Datetimes
-
-      * The **datetime.datetime** class has a powerful function called **strptime**
-      * It helps you to turn a string into a datetime object:
-      * You can learn more about the formatting options [here](https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior)
-
-<pre><code>import datetime
-my_string = "2015-12-08"
-my_date = datetime.datetime.strptime(my_string, "%Y-%m-%d")
-print(my_date)
-</pre></code>
-
-      * The output should be:
-        <pre><code>2015-12-08 00:00:00</pre></code>
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Datetimes
-
-      * There is much more you can do with datetimes
-      * For example, you can get the weekday number for any date:
-
-<pre><code>import datetime
-my_date = datetime.datetime(2015, 9, 8)
-print(my_date.isoweekday())
-</pre></code>
-
-      * The output should be:
-        <pre><code>2</pre></code>
-      * Because it's Tuesday, the second day of the week
-    </script>
-  </section>
-
-  <section>
-      <h2>Exercise</h2>
-
-      <ul>
-        <li>Let's convert the birthdate input string into a datetime object</li>
-      </ul>
-
-<pre><code class="python" data-trim>
-import sys
-from datetime import datetime
-
-if len(sys.argv) < 2:
-    print("ERROR: Please provide a date")
-else:
-    BIRTHDAY = datetime.strptime(sys.argv[1], "%Y-%m-%d")
-    message = "I am born on {}".format(BIRTHDAY.date())
-    print(message)
-</code></pre>
-  </section>
-</section>
-<section>
-  <section>
-  <h2>Table of Content</h2>
-
-  <ul>
-    
-      <li><span >Introduction</span></li>
-      <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
-      <li><span >Variables</span></li>
-      <li><span >Strings</span></li>
-      <li><span >Input & Imports</span></li>
-      <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -694,7 +601,7 @@ value2 = 0
 try:
     result = value1 / value2
 except ZeroDivisionError:
-    print("ERROR: You can't divide by zero")
+    print "ERROR: You can't divide by zero"
 </code></pre>
       * The output should be:
         <pre><code>> ERROR: You can't divide by zero</code></pre>
@@ -713,15 +620,15 @@ import sys
 from datetime import datetime
 
 if len(sys.argv) < 2:
-    print("ERROR: Please provide a date")
+    print "ERROR: Please provide a date"
 else:
     try:
         BIRTHDAY = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     except ValueError:
-        print("ERROR: Please enter a correct date")
+        print "ERROR: Please enter a correct date"
         sys.exit()
     message = "I am born on {}".format(BIRTHDAY.date())
-    print(message)
+    print message
 </code></pre>
 
       <ul>
@@ -738,15 +645,15 @@ else:
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -770,7 +677,7 @@ else:
       * You can call a function like this:
 
 <pre><code>result = function_name(1, 2, kwarg1="Hello"):
-print(result)
+print result
 </pre></code>
 
     </script>
@@ -796,17 +703,17 @@ def get_future_date(base_date, years):
     return future_date
 
 if len(sys.argv) < 3:
-    print("ERROR: Please provide a date and an age")
+    print "ERROR: Please provide a date and an age"
 else:
     try:
         birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     except ValueError:
-        print("ERROR: Please enter a correct date")
+        print "ERROR: Please enter a correct date"
         sys.exit()
     years = int(sys.argv[2])
     future_date = get_future_date(birthday, years)
     message = "I will turn {} on {}".format(years, future_date)
-    print(message)
+    print message
 </code></pre>
   </section>
 </section>
@@ -818,15 +725,15 @@ else:
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -860,13 +767,13 @@ my_variable.remove(4)</code></pre>
 <pre><code class="python">numbers = [1, 2, 3]
 more_numbers = [4, 5, 6]
 all_numbers = numbers + more_numbers
-print(all_numbers)
+print all_numbers
 all_numbers.reverse()
-print(all_numbers)
+print all_number
 all_numbers.append(7)
-print(all_numbers)
+print all_numbers
 all_numbers.sort()
-print(all_numbers)
+print all_numbers
 </code></pre>
 
       * The output should look like this:
@@ -886,8 +793,8 @@ print(all_numbers)
       * It generates a list of numbers for you:
         <pre><code class="python">my_list = range(100)
 my_other_list = range(1, 100, 1)
-print(my_list)
-print(my_other_list)
+print my_list
+print my_other_list
         </code></pre>
     </script>
   </section>
@@ -906,7 +813,7 @@ var my_list = [1, 2, 3, 4]
 for my_number in my_list:
     if my_number == 1:
         continue
-    print (my_number)
+    print my_number
 </code></pre>
 
       <ul>
@@ -935,19 +842,19 @@ def get_future_date(base_date, years):
     return future_date
 
 if len(sys.argv) < 3:
-    print("ERROR: Please provide a date and an age")
+    print "ERROR: Please provide a date and an age"
 else:
     try:
         birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     except ValueError:
-        print("ERROR: Please enter a correct date")
+        print "ERROR: Please enter a correct date"
         sys.exit()
     years = int(sys.argv[2])
     years_list = range(1, years + 1, 1)
     for year in years_list:
         future_date = get_future_date(birthday, year)
         message = "I will turn {} on {}".format(year, future_date)
-        print(message)
+        print message
 </code></pre>
     </script>
   </section>
@@ -960,15 +867,15 @@ else:
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Dictionaries</span></li>
       <li><span >What's Next?</span></li>
     
@@ -1031,12 +938,12 @@ def get_future_date(base_date, years):
     return future_date
 
 if len(sys.argv) < 3:
-    print("ERROR: Please provide a date and an age")
+    print "ERROR: Please provide a date and an age"
 else:
     try:
         birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     except ValueError:
-        print("ERROR: Please enter a correct date")
+        print "ERROR: Please enter a correct date"
         sys.exit()
     years = int(sys.argv[2])
     years_list = range(1, years + 1, 1)
@@ -1044,7 +951,7 @@ else:
         future_date = get_future_date(birthday, year)
         weekday = get_weekday_name(future_date.isoweekday())
         message = "I will turn {} on {}, {}".format(year, weekday, future_date)
-        print(message)
+        print message
 </code></pre>
     </script>
   </section>
@@ -1057,15 +964,113 @@ else:
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >Cloud9 IDE</span></li>
+      <li><span >Setting up python</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
       <li><span >Lists & Loops</span></li>
+      <li><span class="toc-active" style="color: #17BAF9;">Datetimes</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
+    
+  </ul>
+</section>
+  <section data-markdown>
+    <script type="text/template">
+      ##Datetimes
+
+      * The built-in **datetime** module has three important classes: **date**, **datetime** and **timedelta**
+      * We can use these classes to do powerful things with date calulations
+      * In order to use the module, you need to import it
+      * This is how you create a datetime object:
+
+<pre><code class="python">import datetime
+my_date = datetime.datetime(2015, 12, 08)
+print my_date
+</code></pre>
+
+      * The output should be:
+        <pre><code>2015-12-08 00:00:00</pre></code>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Datetimes
+
+      * The **datetime.datetime** class has a powerful function called **strptime**
+      * It helps you to turn a string into a datetime object:
+      * You can learn more about the formatting options [here](https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior)
+
+<pre><code>import datetime
+my_string = "2015-12-08"
+my_date = datetime.datetime.strptime(my_string, "%Y-%m-%d")
+print my_date
+</pre></code>
+
+      * The output should be:
+        <pre><code>2015-12-08 00:00:00</pre></code>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Datetimes
+
+      * There is much more you can do with datetimes
+      * For example, you can get the weekday number for any date:
+
+<pre><code>import datetime
+my_date = datetime.datetime(2015, 9, 8)
+print my_date.isoweekday()
+</pre></code>
+
+      * The output should be:
+        <pre><code>2</pre></code>
+      * Because it's Tuesday, the second day of the week
+    </script>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Let's convert the birthdate input string into a datetime object</li>
+      </ul>
+
+<pre><code class="python" data-trim>
+import sys
+from datetime import datetime
+
+if len(sys.argv) < 2:
+    print "ERROR: Please provide a date"
+else:
+    BIRTHDAY = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+    message = "I am born on {}".format(BIRTHDAY.date())
+    print message
+</code></pre>
+  </section>
+</section>
+<section>
+  <section>
+  <h2>Table of Content</h2>
+
+  <ul>
+    
+      <li><span >Introduction</span></li>
+      <li><span >Python In A Nutshell</span></li>
+      <li><span >Setting up python</span></li>
+      <li><span >Variables</span></li>
+      <li><span >Strings</span></li>
+      <li><span >Input & Imports</span></li>
+      <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Exception Handling</span></li>
+      <li><span >Functions</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Dictionaries</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">What's Next?</span></li>
     
@@ -1076,9 +1081,10 @@ else:
       ##What's Next?
 
       * Work your way through [learnpythonthehardway.org](http://learnpythonthehardway.org/book/)
-      * Come visit our Python 102 workshop :)
-      * Like our Facebook group: [PyLadies SG](https://www.facebook.com/groups/pyladiessg/)
-      * Join our [Slack channel](http://pyladies-sg-slackin.herokuapp.com)
+      * Join DGPLUG for learning more about FOSS or meeting like minded geeks https://dgplug.org
+      * Join our IRC Channel at #dgplug on Freenode
+      * Come to PyCon Delhi to meet us all!
+      * Google Summer of Code, Learning more about programming
     </script>
   </section>
 </section>

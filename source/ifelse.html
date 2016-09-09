@@ -9,10 +9,10 @@
       * If it is not true, either nothing should happen or some other code should be executed
       * The If-Statement helps you to do this:
         <pre><code class="python">if 1 > 2:
-    print("One is bigger than two")
+    print "One is bigger than two"
     # This code is actually never reached
 else:
-    print("One is not bigger than two")
+    print "One is not bigger than two"
         </code></pre>
       * The output should be:
         <pre><code class="bash">> One is not bigger than two</code></pre>
@@ -30,11 +30,11 @@ else:
 import sys
 
 if len(sys.argv) < 2:
-    print("ERROR: Please provide a date")
+    print "ERROR: Please provide a date"
 else:
     BIRTHDAY = sys.argv[1]
     message = "I am born on {}".format(BIRTHDAY)
-    print(message)
+    print message
 </code></pre>
 
       <ul>

@@ -1,1 +1,5 @@
 *.pyc
+reveal-template/
+reveal-template/*
+src
+src/*

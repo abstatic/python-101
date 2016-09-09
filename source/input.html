@@ -21,7 +21,7 @@
       * We can use things from that library by importing them at the top of our files:
         <pre><code class="python">import datetime
 now = datetime.datetime.now()
-print(now)
+print now
         </code></pre>
       * The output should be the current date and time:
         <pre><code class="bash">> 2015-12-08 02:19:15.529046</code></pre>
@@ -42,11 +42,13 @@ import sys
 
 BIRTHDAY = sys.argv[1]
 message = "I am born on {}".format(BIRTHDAY)
-print(message)
+print message
 </code></pre>
 
       <ul>
-        <li>Try to press the "<strong>Run</strong>" button</li>
+        <li>Save your file.</li>
+        <li>Open up command prompt</li>
+        <li>python birthday.py</li>
       </ul>
 
   </section>
@@ -55,11 +57,10 @@ print(message)
     <script type="text/template">
       ##Exercise
 
-      * Whoops! Pressing the "**Run**" button generates an error:
+      * Whoops! The above command generates an error:
         * "*IndexError: list index out of range*"
       * This is because our program now expects one command line argument
       * From now on, we will execute our script from the Terminal
-      * Press "**ALT+T**" to open a new Terminal
       * Enter <pre><code class="bash">python birthday.py 2015-01-01</code></pre>
       * Leave that tab open, we will run our program from here from now on
     </script>
